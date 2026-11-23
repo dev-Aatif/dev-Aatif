@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 114" width="860" height="114" role="img" aria-label="jot project card">
+  <rect x="1" y="1" width="858" height="112" rx="10" fill="#f3f6fa" stroke="#d0d7de" stroke-width="1.5"/>
+  <rect x="1" y="16" width="4" height="82" rx="2" fill="#d97706"/>
+
+  <!-- Command Title -->
+  <text x="24" y="31" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="13">
+    <tspan fill="#d97706" font-weight="700">$ </tspan><tspan fill="#57606a">open ~/pinned/</tspan><tspan fill="#1f2328" font-size="14" font-weight="700">jot</tspan>
+  </text>
+
+  <!-- Right Badge + Arrow -->
+  <rect x="672.4" y="15" width="135.6" height="20" rx="5" fill="#fef3c7"/>
+  <text x="740.2" y="28.5" text-anchor="middle" fill="#d97706" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="700">CLI · LOCAL-FIRST</text>
+  <text x="836" y="30" text-anchor="end" fill="#d97706" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="14" font-weight="700">-&gt;</text>
+
+  <!-- Description -->
+  <text x="24" y="57" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5">Local-first, zero-dependency command-line note-taking and management tool written in pure Rust.</text>
+
+  <!-- Stack Chips -->
+  <rect x="24" y="76" width="48.8" height="22" rx="5" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/><text x="48.4" y="91" text-anchor="middle" fill="#1f2328" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11">Rust</text><rect x="80.8" y="76" width="41.6" height="22" rx="5" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/><text x="101.6" y="91" text-anchor="middle" fill="#1f2328" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11">CLI</text><rect x="130.4" y="76" width="128.0" height="22" rx="5" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/><text x="194.4" y="91" text-anchor="middle" fill="#1f2328" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11">Zero-Dependency</text><rect x="266.4" y="76" width="99.2" height="22" rx="5" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/><text x="316.0" y="91" text-anchor="middle" fill="#1f2328" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11">Local-First</text>
+</svg>
