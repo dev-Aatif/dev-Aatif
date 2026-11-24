@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 332" width="900" height="332" role="img" aria-label="Capability Patchbay — Mobile, Web and Desktop, Backend and Data, Version Control">
+  <defs>
+    <pattern id="rack-grid-dark" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#111714" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes bus-flow {
+      from { stroke-dashoffset: 120; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes bar-eq-1 {
+      0%, 100% { height: 6px; y: 69px; }
+      50% { height: 14px; y: 61px; }
+    }
+    @keyframes bar-eq-2 {
+      0%, 100% { height: 13px; y: 62px; }
+      50% { height: 5px; y: 70px; }
+    }
+    @keyframes bar-eq-3 {
+      0%, 100% { height: 9px; y: 66px; }
+      50% { height: 15px; y: 60px; }
+    }
+    @keyframes packet-slide {
+      0% { transform: translateX(0px); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateX(52px); opacity: 0; }
+    }
+    @keyframes node-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .bus-trace {
+      stroke-dasharray: 12 28;
+      animation: bus-flow 3.6s linear infinite;
+    }
+    .eq1 { animation: bar-eq-1 1.9s ease-in-out infinite; }
+    .eq2 { animation: bar-eq-2 2.3s ease-in-out infinite; }
+    .eq3 { animation: bar-eq-3 1.6s ease-in-out infinite; }
+    .pkt1 { animation: packet-slide 2.4s linear infinite; }
+    .pkt2 { animation: packet-slide 2.4s linear 1.2s infinite; }
+    .led-soft { animation: node-pulse 3s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .bus-trace, .eq1, .eq2, .eq3, .pkt1, .pkt2, .led-soft { animation: none !important; }
+    }
+  </style>
+
+  <!-- Rack Chassis -->
+  <rect x="0.75" y="0.75" width="898.5" height="330.5" rx="12" fill="#0A0D0C" stroke="#1F2924" stroke-width="1.2"/>
+  <rect x="2" y="2" width="896" height="328" rx="11" fill="url(#rack-grid-dark)" opacity="0.75"/>
+
+  <!-- Top Signal Bus Header -->
+  <g font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="1.4">
+    <circle cx="28" cy="22" r="3" fill="#34D399" class="led-soft"/>
+    <text x="40" y="25" fill="#7C8C84">SIGNAL BUS // 04 ACTIVE CHANNELS</text>
+    <!-- Live animated copper/emerald bus line -->
+    <line x1="278" y1="22" x2="735" y2="22" stroke="#2C3A33" stroke-width="1"/>
+    <line x1="278" y1="22" x2="735" y2="22" stroke="#34D399" stroke-width="1.5" class="bus-trace"/>
+    <text x="876" y="25" text-anchor="end" fill="#47554E">SYNC: NOMINAL</text>
+  </g>
+
+  <!-- CH.01 // MOBILE -->
+  <g>
+    <rect x="22" y="42" width="420" height="128" rx="9" fill="#0F1412" stroke="#1F2924" stroke-width="1"/>
+    <circle cx="31" cy="51" r="1.5" fill="#2C3A33"/>
+    <circle cx="433" cy="51" r="1.5" fill="#2C3A33"/>
+    <circle cx="31" cy="161" r="1.5" fill="#2C3A33"/>
+    <circle cx="433" cy="161" r="1.5" fill="#2C3A33"/>
+    <circle cx="46" cy="64" r="3" fill="#34D399"/>
+    <text x="57" y="67.5" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1.5" fill="#34D399">CH.01</text>
+    <text x="104" y="67.5" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F1F5F3">Mobile</text>
+    <!-- Micro-meter (3 smooth animated signal bars) -->
+    <rect x="394" y="57" width="28" height="20" rx="3" fill="#080B0A" stroke="#1F2924" stroke-width="0.8"/>
+    <rect x="399" y="67" width="3.5" height="8" rx="1" fill="#34D399" class="eq1"/>
+    <rect x="406" y="62" width="3.5" height="13" rx="1" fill="#34D399" class="eq2"/>
+    <rect x="413" y="65" width="3.5" height="10" rx="1" fill="#F59E0B" class="eq3"/>
+    <line x1="40" y1="84" x2="424" y2="84" stroke="#1F2924" stroke-width="0.8"/>
+    <rect x="40" y="96" width="50" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="65.0" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Dart</text>
+    <rect x="97" y="96" width="71" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="132.5" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Flutter</text>
+    <rect x="175" y="96" width="78" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="214.0" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Riverpod</text>
+    <rect x="260" y="96" width="64" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="292.0" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Kotlin</text>
+    <rect x="40" y="128" width="128" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="104.0" y="143.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Jetpack Compose</text>
+    <rect x="175" y="128" width="93" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="221.5" y="143.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Material 3</text>
+  </g>
+
+  <!-- CH.02 // WEB AND DESKTOP -->
+  <g>
+    <rect x="458" y="42" width="420" height="128" rx="9" fill="#0F1412" stroke="#1F2924" stroke-width="1"/>
+    <circle cx="467" cy="51" r="1.5" fill="#2C3A33"/>
+    <circle cx="869" cy="51" r="1.5" fill="#2C3A33"/>
+    <circle cx="467" cy="161" r="1.5" fill="#2C3A33"/>
+    <circle cx="869" cy="161" r="1.5" fill="#2C3A33"/>
+    <circle cx="482" cy="64" r="3" fill="#34D399"/>
+    <text x="493" y="67.5" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1.5" fill="#34D399">CH.02</text>
+    <text x="540" y="67.5" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F1F5F3">Web and desktop</text>
+    <!-- Micro-viewport pulse oscilloscope -->
+    <rect x="812" y="57" width="46" height="20" rx="3" fill="#080B0A" stroke="#1F2924" stroke-width="0.8"/>
+    <path d="M 816 67 L 825 67 L 829 61 L 834 73 L 839 65 L 843 67 L 854 67" fill="none" stroke="#34D399" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="852" cy="67" r="2" fill="#34D399" class="led-soft"/>
+    <line x1="476" y1="84" x2="860" y2="84" stroke="#1F2924" stroke-width="0.8"/>
+    <rect x="476" y="96" width="93" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="522.5" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">TypeScript</text>
+    <rect x="576" y="96" width="93" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="622.5" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">JavaScript</text>
+    <rect x="676" y="96" width="57" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="704.5" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">React</text>
+    <rect x="740" y="96" width="71" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="775.5" y="111.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Next.js</text>
+    <rect x="476" y="128" width="107" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="529.5" y="143.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Tailwind CSS</text>
+    <rect x="590" y="128" width="78" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="629.0" y="143.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Electron</text>
+  </g>
+
+  <!-- CH.03 // BACKEND AND DATA -->
+  <g>
+    <rect x="22" y="184" width="420" height="128" rx="9" fill="#0F1412" stroke="#1F2924" stroke-width="1"/>
+    <circle cx="31" cy="193" r="1.5" fill="#2C3A33"/>
+    <circle cx="433" cy="193" r="1.5" fill="#2C3A33"/>
+    <circle cx="31" cy="303" r="1.5" fill="#2C3A33"/>
+    <circle cx="433" cy="303" r="1.5" fill="#2C3A33"/>
+    <circle cx="46" cy="206" r="3" fill="#34D399"/>
+    <text x="57" y="209.5" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1.5" fill="#34D399">CH.03</text>
+    <text x="104" y="209.5" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F1F5F3">Backend and data</text>
+    <!-- Animated data-bus packet trace -->
+    <rect x="364" y="199" width="58" height="20" rx="3" fill="#080B0A" stroke="#1F2924" stroke-width="0.8"/>
+    <line x1="370" y1="209" x2="416" y2="209" stroke="#2C3A33" stroke-width="1"/>
+    <circle cx="370" cy="209" r="2.2" fill="#34D399" class="pkt1"/>
+    <circle cx="370" cy="209" r="2.2" fill="#F59E0B" class="pkt2"/>
+    <line x1="40" y1="226" x2="424" y2="226" stroke="#1F2924" stroke-width="0.8"/>
+    <rect x="40" y="238" width="64" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="72.0" y="253.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Python</text>
+    <rect x="111" y="238" width="71" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="146.5" y="253.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Node.js</text>
+    <rect x="189" y="238" width="71" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="224.5" y="253.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">Express</text>
+    <rect x="267" y="238" width="93" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="313.5" y="253.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">PostgreSQL</text>
+    <rect x="40" y="270" width="64" height="24" rx="5" fill="#141B18" stroke="#24312B" stroke-width="0.95"/>
+    <text x="72.0" y="285.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="500" fill="#B7C4BD">SQLite</text>
+  </g>
+
+  <!-- CH.04 // VERSION CONTROL -->
+  <g>
+    <rect x="458" y="184" width="420" height="128" rx="9" fill="#0F1412" stroke="#1F2924" stroke-width="1"/>
+    <circle cx="467" cy="193" r="1.5" fill="#2C3A33"/>
+    <circle cx="869" cy="193" r="1.5" fill="#2C3A33"/>
+    <circle cx="467" cy="303" r="1.5" fill="#2C3A33"/>
+    <circle cx="869" cy="303" r="1.5" fill="#2C3A33"/>
+    <circle cx="482" cy="206" r="3" fill="#34D399"/>
+    <text x="493" y="209.5" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1.5" fill="#34D399">CH.04</text>
+    <text x="540" y="209.5" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F1F5F3">Version control</text>
+    <line x1="476" y1="226" x2="860" y2="226" stroke="#1F2924" stroke-width="0.8"/>
+    <!-- Highlighted Git pill -->
+    <rect x="476" y="240" width="44" height="24" rx="5" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="0.95"/>
+    <text x="498.0" y="255.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="10.5" font-weight="600" fill="#34D399">Git</text>
+    <!-- Crisp branching/merging commit-graph schematic inside CH.04 -->
+    <g transform="translate(554, 238)">
+      <rect x="0" y="0" width="302" height="50" rx="6" fill="#080B0A" stroke="#1F2924" stroke-width="0.85"/>
+      <!-- Main branch line -->
+      <line x1="20" y1="18" x2="280" y2="18" stroke="#2C3A33" stroke-width="1.4"/>
+      <line x1="20" y1="18" x2="280" y2="18" stroke="#34D399" stroke-width="1.4" class="bus-trace"/>
+      <!-- Feature branch curve -->
+      <path d="M 74 18 C 90 18, 94 35, 112 35 L 188 35 C 206 35, 210 18, 226 18" fill="none" stroke="#F59E0B" stroke-width="1.25" opacity="0.85"/>
+      <!-- Commit nodes -->
+      <circle cx="34" cy="18" r="3.2" fill="#0F1412" stroke="#34D399" stroke-width="1.4"/>
+      <circle cx="74" cy="18" r="3.2" fill="#0F1412" stroke="#34D399" stroke-width="1.4"/>
+      <circle cx="128" cy="35" r="3" fill="#0F1412" stroke="#F59E0B" stroke-width="1.4"/>
+      <circle cx="174" cy="35" r="3" fill="#0F1412" stroke="#F59E0B" stroke-width="1.4"/>
+      <circle cx="226" cy="18" r="3.2" fill="#0F1412" stroke="#34D399" stroke-width="1.4"/>
+      <circle cx="268" cy="18" r="4" fill="#34D399" class="led-soft"/>
+      <text x="268" y="39" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" fill="#7C8C84">HEAD</text>
+      <text x="20" y="39" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" fill="#47554E">MAIN · CLEAN DIFFS</text>
+    </g>
+  </g>
+</svg>

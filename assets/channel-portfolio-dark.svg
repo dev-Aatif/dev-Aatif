@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 82" width="286" height="82" role="img" aria-label="Portfolio: dev-aatif.vercel.app">
+  <style>
+    @keyframes ch-led {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .chled { animation: ch-led 3s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .chled { animation: none !important; } }
+  </style>
+  <rect x="0.75" y="0.75" width="284.5" height="80.5" rx="10" fill="#0F1412" stroke="#1F2924" stroke-width="1.15"/>
+  <line x1="12" y1="1.5" x2="274" y2="1.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <!-- Left Icon Housing -->
+  <rect x="14" y="16" width="48" height="50" rx="8" fill="#080B0A" stroke="#2C3A33" stroke-width="0.9"/>
+  <g stroke="#34D399" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="38" cy="41" r="10"/><ellipse cx="38" cy="41" rx="4.5" ry="10"/><line x1="28" y1="41" x2="48" y2="41"/>
+  </g>
+  <!-- Metadata -->
+  <circle cx="76" cy="28" r="2.5" fill="#34D399" class="chled"/>
+  <text x="85" y="31" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8.5" font-weight="700" letter-spacing="1.4" fill="#7C8C84">CH.C // PORTFOLIO</text>
+  <text x="74" y="54" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#F1F5F3">dev-aatif.vercel.app</text>
+  <text x="270" y="31" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" fill="#34D399">↗</text>
+</svg>

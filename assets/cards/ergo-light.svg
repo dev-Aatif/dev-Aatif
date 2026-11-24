@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 242" width="436" height="242" role="img" aria-label="Ergo — Fully offline Flutter quiz engine powered by modular">
+  <defs>
+    <pattern id="vp-grid-ergo-light" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#E7E3D7" stroke-width="0.65"/>
+    </pattern>
+    <clipPath id="vp-clip-ergo-light">
+      <rect x="18" y="38" width="400" height="90" rx="7"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @keyframes card-led {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .cled { animation: card-led 3.2s ease-in-out infinite; }
+    
+    @keyframes cell-breathe {
+      0%, 100% { opacity: 0.95; }
+      50% { opacity: 0.45; }
+    }
+    @keyframes gauge-sweep {
+      0% { stroke-dashoffset: 138; }
+      60%, 100% { stroke-dashoffset: 18; }
+    }
+    .hm-hi { animation: cell-breathe 3.4s ease-in-out infinite; }
+    .hm-mid { animation: cell-breathe 4.4s ease-in-out 1.1s infinite; }
+    .ergo-arc {
+      stroke-dasharray: 138;
+      animation: gauge-sweep 5.2s ease-out infinite;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <!-- Card Chassis -->
+  <rect x="0.75" y="0.75" width="434.5" height="240.5" rx="11" fill="#F3F1EA" stroke="#D8D4C7" stroke-width="1.15"/>
+  <line x1="12" y1="1.5" x2="424" y2="1.5" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+
+  <!-- Header Strip -->
+  <circle cx="24" cy="21" r="2.8" fill="#059669" class="cled"/>
+  <text x="34" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.2" fill="#5C6861">SPEC.05</text>
+  <text x="100" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="1" fill="#929C96">// MOBILE · FLUTTER</text>
+  <text x="416" y="24" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" fill="#059669">↗</text>
+
+  <!-- Panoramic Kinetic Instrument Viewport (18, 38, 400 x 90) -->
+  <rect x="18" y="38" width="400" height="90" rx="7" fill="#F8F7F2" stroke="#BFB9A8" stroke-width="0.9"/>
+  <g clip-path="url(#vp-clip-ergo-light)">
+    <rect x="18" y="38" width="400" height="90" fill="url(#vp-grid-ergo-light)" opacity="0.75"/>
+    
+    <!-- Left: Activity & Streak Heatmap Matrix -->
+    <text x="34" y="49" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" letter-spacing="1" fill="#5C6861">STREAK HEATMAP · OFFLINE PACKS</text>
+    <g>
+      <rect x="34" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="51" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="68" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="85" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="102" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.1" class=""/>
+      <rect x="119" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="136" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="153" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="170" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="187" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="204" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="221" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="238" y="54" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="34" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.1" class=""/>
+      <rect x="51" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="68" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="85" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="102" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="119" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="136" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="153" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="170" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="187" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="204" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="221" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="238" y="69" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="34" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="51" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="68" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="85" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="102" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="119" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="136" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="153" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="170" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="187" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="204" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="221" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="238" y="84" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="34" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="51" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.1" class=""/>
+      <rect x="68" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="85" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="102" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="119" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="136" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="153" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.48" class=""/>
+      <rect x="170" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.25" class=""/>
+      <rect x="187" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="204" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.72" class="hm-mid"/>
+      <rect x="221" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+      <rect x="238" y="99" width="12" height="11" rx="2.5" fill="#059669" opacity="0.96" class="hm-hi"/>
+    </g>
+
+    <!-- Right: Circular Mastery Gauge (cx=344, cy=84, r=24) -->
+    <circle cx="344" cy="84" r="24" fill="none" stroke="#BFB9A8" stroke-width="4"/>
+    <circle cx="344" cy="84" r="24" fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round" transform="rotate(-90 344 84)" class="ergo-arc"/>
+    <text x="344" y="87" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#141A17">M3</text>
+    <text x="344" y="120" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#929C96">ANALYTICS</text>
+    
+  </g>
+
+  <!-- Title & Concise Engineering Description -->
+  <text x="20" y="159" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" letter-spacing="-0.25" fill="#141A17">Ergo</text>
+  <rect x="337" y="144" width="81" height="19" rx="4" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="0.75"/><text x="377.5" y="156.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8.5" font-weight="600" letter-spacing="0.8" fill="#059669">DLC ENGINE</text>
+  <text x="20" y="179" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5C6861">Fully offline Flutter quiz engine powered by modular</text>
+  <text x="20" y="195" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5C6861">external question packs, streaks &amp; heatmap analytics.</text>
+
+  <!-- Bottom Stack Calibration Footer -->
+  <line x1="18" y1="210" x2="418" y2="210" stroke="#D8D4C7" stroke-width="0.85"/>
+  <text x="20" y="227" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="0.9" fill="#929C96">DART · FLUTTER · RIVERPOD · SQLITE · MATERIAL 3</text>
+</svg>

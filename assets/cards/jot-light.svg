@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 242" width="436" height="242" role="img" aria-label="jot — Zero-dependency, local-first shell knowledge base">
+  <defs>
+    <pattern id="vp-grid-jot-light" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#E7E3D7" stroke-width="0.65"/>
+    </pattern>
+    <clipPath id="vp-clip-jot-light">
+      <rect x="18" y="38" width="400" height="90" rx="7"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @keyframes card-led {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .cled { animation: card-led 3.2s ease-in-out infinite; }
+    
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes beam-scan {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(28px); }
+    }
+    .t-cursor { animation: cursor-blink 1.1s step-end infinite; }
+    .fts-beam { animation: beam-scan 4.2s ease-in-out infinite; }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <!-- Card Chassis -->
+  <rect x="0.75" y="0.75" width="434.5" height="240.5" rx="11" fill="#F3F1EA" stroke="#D8D4C7" stroke-width="1.15"/>
+  <line x1="12" y1="1.5" x2="424" y2="1.5" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+
+  <!-- Header Strip -->
+  <circle cx="24" cy="21" r="2.8" fill="#059669" class="cled"/>
+  <text x="34" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.2" fill="#5C6861">SPEC.06</text>
+  <text x="100" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="1" fill="#929C96">// SHELL · PURE RUST</text>
+  <text x="416" y="24" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" fill="#059669">↗</text>
+
+  <!-- Panoramic Kinetic Instrument Viewport (18, 38, 400 x 90) -->
+  <rect x="18" y="38" width="400" height="90" rx="7" fill="#F8F7F2" stroke="#BFB9A8" stroke-width="0.9"/>
+  <g clip-path="url(#vp-clip-jot-light)">
+    <rect x="18" y="38" width="400" height="90" fill="url(#vp-grid-jot-light)" opacity="0.75"/>
+    
+    <!-- Miniature 3-Pane TUI Frame -->
+    <rect x="30" y="47" width="376" height="72" rx="5" fill="#F3F1EA" stroke="#BFB9A8" stroke-width="0.9"/>
+    <!-- Vertical Pane Dividers -->
+    <line x1="128" y1="47" x2="128" y2="119" stroke="#D8D4C7" stroke-width="0.85"/>
+    <line x1="274" y1="47" x2="274" y2="119" stroke="#D8D4C7" stroke-width="0.85"/>
+
+    <!-- Pane 1: Nested Tags -->
+    <text x="40" y="61" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" font-weight="700" fill="#059669"># TAGS</text>
+    <text x="40" y="75" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#2F3A34">▸ sys/rust</text>
+    <text x="40" y="89" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#5C6861">  arch/local</text>
+    <text x="40" y="103" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#5C6861">  db/fts5</text>
+
+    <!-- Pane 2: Animated FTS5 Index Scan -->
+    <text x="138" y="61" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" font-weight="700" fill="#B45309">/ FTS5 INDEX</text>
+    <rect x="134" y="67" width="134" height="14" rx="2.5" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="0.7" class="fts-beam"/>
+    <text x="140" y="77" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#141A17">01 · event-store.md</text>
+    <text x="140" y="92" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#5C6861">02 · solar-math.md</text>
+    <text x="140" y="107" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#5C6861">03 · zero-deps.md</text>
+
+    <!-- Pane 3: Command Prompt + Telemetry -->
+    <text x="284" y="61" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" font-weight="700" fill="#5C6861">$ JOTUN</text>
+    <text x="284" y="77" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" fill="#059669">&gt; jot new</text>
+    <rect x="334" y="70" width="5.5" height="9" fill="#059669" class="t-cursor"/>
+    <text x="284" y="96" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#929C96">RAM  &lt; 10 MB</text>
+    <text x="284" y="109" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#929C96">DEPS   ZERO</text>
+    
+  </g>
+
+  <!-- Title & Concise Engineering Description -->
+  <text x="20" y="159" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" letter-spacing="-0.25" fill="#141A17">jot</text>
+  <rect x="344" y="144" width="74" height="19" rx="4" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="0.75"/><text x="381.0" y="156.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8.5" font-weight="600" letter-spacing="0.8" fill="#059669">JOTUN TUI</text>
+  <text x="20" y="179" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5C6861">Zero-dependency, local-first shell knowledge base</text>
+  <text x="20" y="195" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5C6861">in pure Rust with SQLite FTS5 &amp; 3-pane TUI under 10 MB.</text>
+
+  <!-- Bottom Stack Calibration Footer -->
+  <line x1="18" y1="210" x2="418" y2="210" stroke="#D8D4C7" stroke-width="0.85"/>
+  <text x="20" y="227" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="0.9" fill="#929C96">RUST · SQLITE FTS5 · ZERO DEPS · CRATES.IO</text>
+</svg>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dev-Aatif — GitHub Profile README Preview</title>
+  <style>
+    :root {
+      --gh-canvas: #0d1117;
+      --gh-card: #0d1117;
+      --gh-border: #30363d;
+      --gh-text: #e6edf3;
+      --gh-muted: #8b949e;
+      --gh-link: #58a6ff;
+      --gh-code-bg: rgba(110, 118, 129, 0.25);
+      --gh-btn-bg: #161b22;
+      --gh-btn-active: #238636;
+    }
+    html[data-theme="light"] {
+      --gh-canvas: #ffffff;
+      --gh-card: #ffffff;
+      --gh-border: #d0d7de;
+      --gh-text: #1f2328;
+      --gh-muted: #656d76;
+      --gh-link: #0969da;
+      --gh-code-bg: rgba(175, 184, 193, 0.2);
+      --gh-btn-bg: #f6f8fa;
+      --gh-btn-active: #1f883d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 16px 64px;
+      background: var(--gh-canvas);
+      color: var(--gh-text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .toolbar {
+      max-width: 896px;
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border: 1px solid var(--gh-border);
+      border-radius: 8px;
+      background: var(--gh-btn-bg);
+      font-size: 13px;
+    }
+    .toolbar-title {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: var(--gh-muted);
+    }
+    .toggle-group { display: flex; gap: 8px; }
+    button {
+      border: 1px solid var(--gh-border);
+      background: var(--gh-canvas);
+      color: var(--gh-text);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button.active {
+      background: var(--gh-btn-active);
+      border-color: var(--gh-btn-active);
+      color: #ffffff;
+    }
+    .readme-box {
+      max-width: 896px;
+      margin: 0 auto;
+      padding: 28px;
+      border: 1px solid var(--gh-border);
+      border-radius: 8px;
+      background: var(--gh-card);
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .row.full img { width: 100%; display: block; }
+    .row.two a { width: calc(50% - 6px); display: block; }
+    .row.three a { width: calc(33.333% - 8px); display: block; }
+    .row a img { width: 100%; display: block; transition: transform 0.18s ease; }
+    .row a:hover img { transform: translateY(-2px); }
+    details {
+      margin: 14px 0 8px;
+      font-size: 14px;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--gh-muted);
+      user-select: none;
+    }
+    summary code {
+      background: var(--gh-code-bg);
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 12.5px;
+      color: var(--gh-text);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13.5px;
+    }
+    th, td {
+      border: 1px solid var(--gh-border);
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th { background: var(--gh-btn-bg); }
+    .contact-line {
+      text-align: center;
+      font-size: 14.5px;
+      margin: 16px 0 20px;
+      color: var(--gh-muted);
+    }
+    a { color: var(--gh-link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .spacer { height: 14px; }
+    @media (max-width: 700px) {
+      .row.two a, .row.three a { width: 100%; }
+      .readme-box { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span class="toolbar-title">dev-Aatif / README.md · Local GitHub Renderer Preview</span>
+    <div class="toggle-group">
+      <button id="btn-dark" class="active" onclick="setTheme('dark')">GitHub Dark (Darkroom)</button>
+      <button id="btn-light" onclick="setTheme('light')">GitHub Light (Archival Vellum)</button>
+    </div>
+  </div>
+
+  <main class="readme-box">
+    <div class="row full">
+      <img data-base="./assets/hero" src="./assets/hero-dark.svg" alt="Aatif Hero" />
+    </div>
+
+    <div class="spacer"></div>
+    <div class="row full">
+      <img data-base="./assets/divider-01" src="./assets/divider-01-dark.svg" alt="01 Capability Patchbay" />
+    </div>
+    <div class="row full">
+      <img data-base="./assets/patchbay" src="./assets/patchbay-dark.svg" alt="Capability Patchbay" />
+    </div>
+
+    <details>
+      <summary><code>▸ &nbsp;Open plain-text specification table</code></summary>
+      <table>
+        <thead><tr><th>Surface</th><th>Stack</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mobile</strong></td><td>Dart, Flutter, Riverpod, Kotlin, Jetpack Compose, Material 3</td></tr>
+          <tr><td><strong>Web and desktop</strong></td><td>TypeScript, JavaScript, React, Next.js, Tailwind CSS, Electron</td></tr>
+          <tr><td><strong>Backend and data</strong></td><td>Python, Node.js, Express, PostgreSQL, SQLite</td></tr>
+          <tr><td><strong>Version control</strong></td><td>Git</td></tr>
+        </tbody>
+      </table>
+    </details>
+
+    <div class="spacer"></div>
+    <div class="row full">
+      <img data-base="./assets/divider-02" src="./assets/divider-02-dark.svg" alt="02 Pinned Exhibition" />
+    </div>
+
+    <div class="row two">
+      <a href="https://github.com/dev-Aatif/Pixel-Forge" target="_blank" rel="noreferrer">
+        <img data-base="./assets/cards/pixel-forge" src="./assets/cards/pixel-forge-dark.svg" alt="Pixel-Forge" />
+      </a>
+      <a href="https://github.com/dev-Aatif/sarmaya" target="_blank" rel="noreferrer">
+        <img data-base="./assets/cards/sarmaya" src="./assets/cards/sarmaya-dark.svg" alt="Sarmaya" />
+      </a>
+    </div>
+    <div class="row two">
+      <a href="https://github.com/dev-Aatif/Hayya" target="_blank" rel="noreferrer">
+        <img data-base="./assets/cards/hayya" src="./assets/cards/hayya-dark.svg" alt="Hayya" />
+      </a>
+      <a href="https://github.com/dev-Aatif/nebula-downloader" target="_blank" rel="noreferrer">
+        <img data-base="./assets/cards/nebula" src="./assets/cards/nebula-dark.svg" alt="nebula-downloader" />
+      </a>
+    </div>
+    <div class="row two">
+      <a href="https://github.com/dev-Aatif/Ergo" target="_blank" rel="noreferrer">
+        <img data-base="./assets/cards/ergo" src="./assets/cards/ergo-dark.svg" alt="Ergo" />
+      </a>
+      <a href="https://github.com/dev-Aatif/jot" target="_blank" rel="noreferrer">
+        <img data-base="./assets/cards/jot" src="./assets/cards/jot-dark.svg" alt="jot" />
+      </a>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="row full">
+      <img data-base="./assets/divider-03" src="./assets/divider-03-dark.svg" alt="03 Signal Dispatch" />
+    </div>
+
+    <div class="row three">
+      <a href="mailto:Aatif.biz@protonmail.com">
+        <img data-base="./assets/channel-email" src="./assets/channel-email-dark.svg" alt="Email" />
+      </a>
+      <a href="https://www.linkedin.com/in/dev-aatif/" target="_blank" rel="noreferrer">
+        <img data-base="./assets/channel-linkedin" src="./assets/channel-linkedin-dark.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://dev-aatif.vercel.app/" target="_blank" rel="noreferrer">
+        <img data-base="./assets/channel-portfolio" src="./assets/channel-portfolio-dark.svg" alt="Portfolio" />
+      </a>
+    </div>
+
+    <p class="contact-line">
+      Reach me by <a href="mailto:Aatif.biz@protonmail.com">email</a>, on
+      <a href="https://www.linkedin.com/in/dev-aatif/" target="_blank" rel="noreferrer">LinkedIn</a>, or at
+      <a href="https://dev-aatif.vercel.app/" target="_blank" rel="noreferrer">dev-aatif.vercel.app</a>.
+    </p>
+
+    <div class="row full">
+      <img data-base="./assets/colophon" src="./assets/colophon-dark.svg" alt="Colophon" />
+    </div>
+  </main>
+
+  <script>
+    function setTheme(mode) {
+      document.documentElement.setAttribute('data-theme', mode);
+      document.getElementById('btn-dark').classList.toggle('active', mode === 'dark');
+      document.getElementById('btn-light').classList.toggle('active', mode === 'light');
+      document.querySelectorAll('img[data-base]').forEach((img) => {
+        img.src = img.dataset.base + '-' + mode + '.svg';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 242" width="436" height="242" role="img" aria-label="Sarmaya — Offline-first Pakistan Stock Exchange portfolio tracker">
+  <defs>
+    <pattern id="vp-grid-sarmaya-light" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#E7E3D7" stroke-width="0.65"/>
+    </pattern>
+    <clipPath id="vp-clip-sarmaya-light">
+      <rect x="18" y="38" width="400" height="90" rx="7"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @keyframes card-led {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .cled { animation: card-led 3.2s ease-in-out infinite; }
+    
+    @keyframes curve-draw {
+      0% { stroke-dashoffset: 380; }
+      65%, 100% { stroke-dashoffset: 0; }
+    }
+    @keyframes scan-ledger {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(270px); }
+    }
+    .equity-line {
+      stroke-dasharray: 380;
+      animation: curve-draw 5s ease-out infinite;
+    }
+    .ledger-cursor {
+      animation: scan-ledger 6.4s ease-in-out infinite;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <!-- Card Chassis -->
+  <rect x="0.75" y="0.75" width="434.5" height="240.5" rx="11" fill="#F3F1EA" stroke="#D8D4C7" stroke-width="1.15"/>
+  <line x1="12" y1="1.5" x2="424" y2="1.5" stroke="rgba(255,255,255,0.85)" stroke-width="1"/>
+
+  <!-- Header Strip -->
+  <circle cx="24" cy="21" r="2.8" fill="#059669" class="cled"/>
+  <text x="34" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.2" fill="#5C6861">SPEC.02</text>
+  <text x="100" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="1" fill="#929C96">// ANDROID · FINTECH</text>
+  <text x="416" y="24" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" fill="#059669">↗</text>
+
+  <!-- Panoramic Kinetic Instrument Viewport (18, 38, 400 x 90) -->
+  <rect x="18" y="38" width="400" height="90" rx="7" fill="#F8F7F2" stroke="#BFB9A8" stroke-width="0.9"/>
+  <g clip-path="url(#vp-clip-sarmaya-light)">
+    <rect x="18" y="38" width="400" height="90" fill="url(#vp-grid-sarmaya-light)" opacity="0.75"/>
+    
+    <!-- Area under PSX Equity Curve -->
+    <path d="M 38 106 L 78 98 L 118 102 L 164 84 L 208 88 L 254 66 L 304 72 L 352 54 L 386 58 L 386 112 L 38 112 Z" fill="rgba(5,150,105,0.10)"/>
+    <!-- Animated Equity Curve -->
+    <path d="M 38 106 L 78 98 L 118 102 L 164 84 L 208 88 L 254 66 L 304 72 L 352 54 L 386 58" fill="none" stroke="#059669" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="equity-line"/>
+
+    <!-- Event-Sourced Transaction Replay Markers -->
+    <g font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" text-anchor="middle">
+      <circle cx="78" cy="98" r="3" fill="#059669"/>
+      <text x="78" y="122" fill="#5C6861">BUY</text>
+
+      <circle cx="164" cy="84" r="3" fill="#B45309"/>
+      <text x="164" y="122" fill="#B45309">DIV</text>
+
+      <circle cx="254" cy="66" r="3" fill="#059669"/>
+      <text x="254" y="122" fill="#5C6861">BONUS</text>
+
+      <circle cx="352" cy="54" r="3.4" fill="#059669"/>
+      <text x="352" y="122" fill="#059669">P/L</text>
+    </g>
+
+    <!-- Sweeping Deterministic Replay Hairline -->
+    <g class="ledger-cursor">
+      <line x1="68" y1="42" x2="68" y2="112" stroke="#2F3A34" stroke-width="0.9" stroke-dasharray="2 2" opacity="0.65"/>
+      <circle cx="68" cy="46" r="2.2" fill="#B45309"/>
+    </g>
+
+    <!-- Corner Readout -->
+    <text x="32" y="54" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" letter-spacing="1" fill="#059669">PSX · EVENT-SOURCED</text>
+    <text x="32" y="66" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#929C96">APPEND-ONLY SQLITE LEDGER</text>
+    
+  </g>
+
+  <!-- Title & Concise Engineering Description -->
+  <text x="20" y="159" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" letter-spacing="-0.25" fill="#141A17">Sarmaya</text>
+  <rect x="337" y="144" width="81" height="19" rx="4" fill="rgba(5,150,105,0.10)" stroke="#059669" stroke-width="0.75"/><text x="377.5" y="156.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8.5" font-weight="600" letter-spacing="0.8" fill="#059669">PSX LEDGER</text>
+  <text x="20" y="179" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5C6861">Offline-first Pakistan Stock Exchange portfolio tracker</text>
+  <text x="20" y="195" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#5C6861">with an event-sourced engine for exact holdings &amp; P/L.</text>
+
+  <!-- Bottom Stack Calibration Footer -->
+  <line x1="18" y1="210" x2="418" y2="210" stroke="#D8D4C7" stroke-width="0.85"/>
+  <text x="20" y="227" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="0.9" fill="#929C96">KOTLIN · JETPACK COMPOSE · MATERIAL 3 · ROOM SQLITE</text>
+</svg>

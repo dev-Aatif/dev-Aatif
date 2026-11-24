@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 242" width="436" height="242" role="img" aria-label="Pixel-Forge — Offline on-device AI super-resolution &amp; face restoration">
+  <defs>
+    <pattern id="vp-grid-pixelforge-dark" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#161E1A" stroke-width="0.65"/>
+    </pattern>
+    <clipPath id="vp-clip-pixelforge-dark">
+      <rect x="18" y="38" width="400" height="90" rx="7"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @keyframes card-led {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .cled { animation: card-led 3.2s ease-in-out infinite; }
+    
+    @keyframes loupe-glide {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(138px); }
+    }
+    .loupe { animation: loupe-glide 5.6s ease-in-out infinite; }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <!-- Card Chassis -->
+  <rect x="0.75" y="0.75" width="434.5" height="240.5" rx="11" fill="#0F1412" stroke="#1F2924" stroke-width="1.15"/>
+  <line x1="12" y1="1.5" x2="424" y2="1.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Header Strip -->
+  <circle cx="24" cy="21" r="2.8" fill="#34D399" class="cled"/>
+  <text x="34" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.2" fill="#7C8C84">SPEC.01</text>
+  <text x="100" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="1" fill="#47554E">// ANDROID · ON-DEVICE AI</text>
+  <text x="416" y="24" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" fill="#34D399">↗</text>
+
+  <!-- Panoramic Kinetic Instrument Viewport (18, 38, 400 x 90) -->
+  <rect x="18" y="38" width="400" height="90" rx="7" fill="#080B0A" stroke="#2C3A33" stroke-width="0.9"/>
+  <g clip-path="url(#vp-clip-pixelforge-dark)">
+    <rect x="18" y="38" width="400" height="90" fill="url(#vp-grid-pixelforge-dark)" opacity="0.75"/>
+    
+    <!-- Left Zone: 1x Low-Res Pixel Input -->
+    <g>
+      <rect x="42" y="54" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.2"/>
+      <rect x="58" y="54" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.35"/>
+      <rect x="74" y="54" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.55"/>
+      <rect x="90" y="54" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.3"/>
+      <rect x="106" y="54" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.18"/>
+      <rect x="42" y="70" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.32"/>
+      <rect x="58" y="70" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.65"/>
+      <rect x="74" y="70" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.85"/>
+      <rect x="90" y="70" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.52"/>
+      <rect x="106" y="70" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.26"/>
+      <rect x="42" y="86" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.22"/>
+      <rect x="58" y="86" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.45"/>
+      <rect x="74" y="86" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.62"/>
+      <rect x="90" y="86" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.38"/>
+      <rect x="106" y="86" width="14" height="14" rx="1" fill="#7C8C84" opacity="0.16"/>
+      <text x="34" y="118" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" letter-spacing="1" fill="#47554E">1× RAW INPUT</text>
+    </g>
+
+    <!-- Right Zone: 4x On-Device Upscaled Vector Reconstruction -->
+    <g transform="translate(172, 0)">
+      <circle cx="88" cy="80" r="28" fill="none" stroke="#34D399" stroke-width="1.35"/>
+      <circle cx="88" cy="80" r="19" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="1"/>
+      <circle cx="88" cy="80" r="9" fill="none" stroke="#B7C4BD" stroke-width="1.1"/>
+      <path d="M 48 94 Q 72 52 88 74 T 134 62" fill="none" stroke="#34D399" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="88" cy="80" r="2.6" fill="#F59E0B"/>
+      <text x="48" y="118" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" letter-spacing="1" fill="#34D399">4× NCNN VULKAN / ONNX</text>
+    </g>
+
+    <!-- Animated Darkroom Split-Loupe Bar -->
+    <g class="loupe">
+      <line x1="138" y1="38" x2="138" y2="128" stroke="#34D399" stroke-width="1.6"/>
+      <circle cx="138" cy="82" r="13" fill="#080B0A" fill-opacity="0.7" stroke="#34D399" stroke-width="1.5"/>
+      <line x1="131" y1="82" x2="145" y2="82" stroke="#FB7185" stroke-width="1"/>
+      <line x1="138" y1="75" x2="138" y2="89" stroke="#FB7185" stroke-width="1"/>
+      <rect x="122" y="43" width="32" height="13" rx="3" fill="#34D399"/>
+      <text x="138" y="52.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" font-weight="700" fill="#0A0D0C">LOUPE</text>
+    </g>
+
+    <!-- Right Spec Callout -->
+    <text x="404" y="54" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" fill="#7C8C84">ZERO CLOUD</text>
+    <text x="404" y="66" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8" fill="#47554E">ARM64-V8A</text>
+    
+  </g>
+
+  <!-- Title & Concise Engineering Description -->
+  <text x="20" y="159" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" letter-spacing="-0.25" fill="#F1F5F3">Pixel-Forge</text>
+  <rect x="331" y="144" width="87" height="19" rx="4" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="0.75"/><text x="374.5" y="156.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8.5" font-weight="600" letter-spacing="0.8" fill="#34D399">DARKROOM 4×</text>
+  <text x="20" y="179" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#7C8C84">Offline on-device AI super-resolution &amp; face restoration</text>
+  <text x="20" y="195" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#7C8C84">with a pinch-to-zoom darkroom loupe and zero uploads.</text>
+
+  <!-- Bottom Stack Calibration Footer -->
+  <line x1="18" y1="210" x2="418" y2="210" stroke="#1F2924" stroke-width="0.85"/>
+  <text x="20" y="227" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="0.9" fill="#47554E">KOTLIN · JETPACK COMPOSE · NCNN VULKAN · ONNX RUNTIME</text>
+</svg>

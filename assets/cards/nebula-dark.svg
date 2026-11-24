@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 242" width="436" height="242" role="img" aria-label="nebula-downloader — Cross-platform desktop video &amp; audio downloader">
+  <defs>
+    <pattern id="vp-grid-nebula-dark" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#161E1A" stroke-width="0.65"/>
+    </pattern>
+    <clipPath id="vp-clip-nebula-dark">
+      <rect x="18" y="38" width="400" height="90" rx="7"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    @keyframes card-led {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .cled { animation: card-led 3.2s ease-in-out infinite; }
+    
+    @keyframes stream-dash {
+      from { stroke-dashoffset: 64; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes bar-fill-a {
+      0% { width: 42px; }
+      70% { width: 142px; }
+      100% { width: 142px; }
+    }
+    @keyframes bar-fill-b {
+      0% { width: 24px; }
+      80% { width: 118px; }
+      100% { width: 118px; }
+    }
+    .stream-flow {
+      stroke-dasharray: 8 8;
+      animation: stream-dash 1.8s linear infinite;
+    }
+    .qbar-a { animation: bar-fill-a 4.8s ease-in-out infinite; }
+    .qbar-b { animation: bar-fill-b 5.6s ease-in-out infinite; }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <!-- Card Chassis -->
+  <rect x="0.75" y="0.75" width="434.5" height="240.5" rx="11" fill="#0F1412" stroke="#1F2924" stroke-width="1.15"/>
+  <line x1="12" y1="1.5" x2="424" y2="1.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Header Strip -->
+  <circle cx="24" cy="21" r="2.8" fill="#34D399" class="cled"/>
+  <text x="34" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.2" fill="#7C8C84">SPEC.04</text>
+  <text x="100" y="24" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="1" fill="#47554E">// DESKTOP · ELECTRON</text>
+  <text x="416" y="24" text-anchor="end" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="11" fill="#34D399">↗</text>
+
+  <!-- Panoramic Kinetic Instrument Viewport (18, 38, 400 x 90) -->
+  <rect x="18" y="38" width="400" height="90" rx="7" fill="#080B0A" stroke="#2C3A33" stroke-width="0.9"/>
+  <g clip-path="url(#vp-clip-nebula-dark)">
+    <rect x="18" y="38" width="400" height="90" fill="url(#vp-grid-nebula-dark)" opacity="0.75"/>
+    
+    <!-- Source Conduit -->
+    <rect x="30" y="54" width="66" height="56" rx="6" fill="#0F1412" stroke="#2C3A33" stroke-width="1"/>
+    <text x="63" y="79" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#34D399">YT-DLP</text>
+    <text x="63" y="93" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.5" fill="#47554E">1000+ SITES</text>
+
+    <!-- Animated Multi-Lane Pipeline Traces -->
+    <path d="M 96 68 L 154 68" stroke="#34D399" stroke-width="1.4" class="stream-flow"/>
+    <path d="M 96 82 L 154 82" stroke="#38BDF8" stroke-width="1.4" class="stream-flow"/>
+    <path d="M 96 96 L 154 96" stroke="#F59E0B" stroke-width="1.2" class="stream-flow"/>
+
+    <!-- Concurrent Queue Monitor -->
+    <rect x="158" y="48" width="244" height="70" rx="6" fill="#0F1412" stroke="#1F2924" stroke-width="0.9"/>
+    <text x="170" y="64" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.8" fill="#B7C4BD">8K VIDEO · MKV</text>
+    <rect x="252" y="57" width="136" height="8" rx="3" fill="#080B0A" stroke="#1F2924" stroke-width="0.6"/>
+    <rect x="252" y="57" width="112" height="8" rx="3" fill="#34D399" class="qbar-a"/>
+
+    <text x="170" y="84" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.8" fill="#B7C4BD">AUDIO · WAV/M4A</text>
+    <rect x="252" y="77" width="136" height="8" rx="3" fill="#080B0A" stroke="#1F2924" stroke-width="0.6"/>
+    <rect x="252" y="77" width="88" height="8" rx="3" fill="#38BDF8" class="qbar-b"/>
+
+    <text x="170" y="104" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="7.8" fill="#7C8C84">SQLITE INDEX · RESUME READY</text>
+    <circle cx="384" cy="101" r="3" fill="#34D399" class="cled"/>
+    
+  </g>
+
+  <!-- Title & Concise Engineering Description -->
+  <text x="20" y="159" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" letter-spacing="-0.25" fill="#F1F5F3">nebula-downloader</text>
+  <rect x="350" y="144" width="68" height="19" rx="4" fill="rgba(52,211,153,0.12)" stroke="#34D399" stroke-width="0.75"/><text x="384.0" y="156.5" text-anchor="middle" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="8.5" font-weight="600" letter-spacing="0.8" fill="#34D399">UP TO 8K</text>
+  <text x="20" y="179" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#7C8C84">Cross-platform desktop video &amp; audio downloader</text>
+  <text x="20" y="195" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#7C8C84">with concurrent queues, clipboard watch &amp; SQLite index.</text>
+
+  <!-- Bottom Stack Calibration Footer -->
+  <line x1="18" y1="210" x2="418" y2="210" stroke="#1F2924" stroke-width="0.85"/>
+  <text x="20" y="227" font-family="'SF Mono', 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace" font-size="9" letter-spacing="0.9" fill="#47554E">ELECTRON · REACT 19 · TYPESCRIPT · TAILWIND · YT-DLP</text>
+</svg>
